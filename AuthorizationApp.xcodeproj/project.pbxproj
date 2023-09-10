@@ -56,15 +56,55 @@
 		56F0AD562AAE0CCD005F3327 /* AuthorizationApp */ = {
 			isa = PBXGroup;
 			children = (
-				56F0AD572AAE0CCD005F3327 /* AppDelegate.swift */,
-				56F0AD592AAE0CCD005F3327 /* SceneDelegate.swift */,
-				56F0AD5B2AAE0CCD005F3327 /* ViewController.swift */,
-				56F0AD5D2AAE0CCD005F3327 /* Main.storyboard */,
-				56F0AD602AAE0CCF005F3327 /* Assets.xcassets */,
-				56F0AD622AAE0CCF005F3327 /* LaunchScreen.storyboard */,
-				56F0AD652AAE0CCF005F3327 /* Info.plist */,
+				56F0AD6B2AAE0D05005F3327 /* ViewControllers */,
+				56F0AD6F2AAE0D8B005F3327 /* Models */,
+				56F0AD6D2AAE0D57005F3327 /* Storyboards */,
+				56F0AD6C2AAE0D19005F3327 /* SupportingFiles */,
+				56F0AD6E2AAE0D65005F3327 /* Source */,
 			);
 			path = AuthorizationApp;
+			sourceTree = "<group>";
+		};
+		56F0AD6B2AAE0D05005F3327 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56F0AD5B2AAE0CCD005F3327 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		56F0AD6C2AAE0D19005F3327 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				56F0AD572AAE0CCD005F3327 /* AppDelegate.swift */,
+				56F0AD592AAE0CCD005F3327 /* SceneDelegate.swift */,
+				56F0AD652AAE0CCF005F3327 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		56F0AD6D2AAE0D57005F3327 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				56F0AD5D2AAE0CCD005F3327 /* Main.storyboard */,
+				56F0AD622AAE0CCF005F3327 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56F0AD6E2AAE0D65005F3327 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				56F0AD602AAE0CCF005F3327 /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		56F0AD6F2AAE0D8B005F3327 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,12 +328,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AuthorizationApp/Info.plist;
+				INFOPLIST_FILE = AuthorizationApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ukolovea.AuthorizationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,12 +358,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AuthorizationApp/Info.plist;
+				INFOPLIST_FILE = AuthorizationApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ukolovea.AuthorizationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
