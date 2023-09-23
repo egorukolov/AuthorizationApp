@@ -110,14 +110,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-gU-f0C">
+                                <rect key="frame" x="139" y="115" width="97.5" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBB-BS-FSS">
+                                <rect key="frame" x="160.5" y="250.5" width="54" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-kY-aj3">
+                                <rect key="frame" x="137" y="445" width="101.5" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LogOut">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lGM-qR-gwE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bBB-BS-FSS" firstAttribute="top" secondItem="tcg-gU-f0C" secondAttribute="bottom" constant="90" id="0NT-Th-Ud5"/>
+                            <constraint firstItem="cXK-kY-aj3" firstAttribute="centerX" secondItem="XL6-zY-DIA" secondAttribute="centerX" id="0jQ-8C-EXg"/>
+                            <constraint firstItem="lGM-qR-gwE" firstAttribute="bottom" secondItem="cXK-kY-aj3" secondAttribute="bottom" constant="130" id="25a-7U-mws"/>
                             <constraint firstItem="UKJ-QD-e5s" firstAttribute="trailing" secondItem="lGM-qR-gwE" secondAttribute="trailing" id="EGh-DJ-AbC"/>
                             <constraint firstItem="UKJ-QD-e5s" firstAttribute="leading" secondItem="lGM-qR-gwE" secondAttribute="leading" id="Fw9-Nl-Qlj"/>
+                            <constraint firstItem="bBB-BS-FSS" firstAttribute="centerX" secondItem="XL6-zY-DIA" secondAttribute="centerX" id="fkn-Oz-3E2"/>
                             <constraint firstItem="UKJ-QD-e5s" firstAttribute="top" secondItem="lGM-qR-gwE" secondAttribute="top" id="hNx-GO-dYk"/>
+                            <constraint firstItem="tcg-gU-f0C" firstAttribute="centerX" secondItem="XL6-zY-DIA" secondAttribute="centerX" id="i2N-dv-Lt1"/>
                             <constraint firstItem="UKJ-QD-e5s" firstAttribute="bottom" secondItem="lGM-qR-gwE" secondAttribute="bottom" id="rEa-dB-skF"/>
+                            <constraint firstItem="tcg-gU-f0C" firstAttribute="top" secondItem="lGM-qR-gwE" secondAttribute="top" constant="115" id="upb-K6-6lM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person.crop.circle.fill" catalog="system" selectedImage="person.crop.circle.fill" id="dJG-l3-LJZ"/>
