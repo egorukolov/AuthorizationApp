@@ -23,7 +23,7 @@ class TabBarController: UIViewController {
     
     
     @IBAction func logOutButton() {
-        dismiss(animated: true)
+        //dismiss(animated: true)
     }
     
 }

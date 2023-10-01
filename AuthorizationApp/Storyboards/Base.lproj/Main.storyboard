@@ -28,12 +28,18 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGl-xl-taa">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="iGP-a7-CPX"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Za-ni-ZPV">
                                         <rect key="frame" x="0.0" y="49" width="305" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="sxt-Vy-cai"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -48,7 +54,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xxo-hy-rtm"/>
-                                            <segue destination="kdx-Pn-x4X" kind="presentation" modalPresentationStyle="fullScreen" id="3Ez-Sw-Ran"/>
+                                            <segue destination="kdx-Pn-x4X" kind="presentation" identifier="go2NextScreen" modalPresentationStyle="fullScreen" id="3Ez-Sw-Ran"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-Jz-KPS">
@@ -141,6 +147,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOutButton" destination="qJ5-4u-D9Z" eventType="touchUpInside" id="bWK-OS-vFq"/>
+                                    <segue destination="lGo-qT-v1j" kind="unwind" unwindAction="unwindSegueToViewControllerWithSegue:" id="AVt-8R-M83"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -165,6 +172,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfe-Zf-Bho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lGo-qT-v1j" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1609" y="-2"/>
         </scene>
@@ -205,8 +213,31 @@
                     <view key="view" contentMode="scaleToFill" id="PHw-mh-6OZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bit-dh-eTe">
+                                <rect key="frame" x="20" y="94" width="335" height="474"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">I am so filled with my knowledge that I seem to have
+been living on trillions and
+trillions of planets like this Earth for a hundred trillion billion years, this world is absolutely
+clear to me, and I am looking for only one thing here - peace, peace and
+this harmony, from merging with the infinitely eternal, from contemplating
+the great fractal similarity and from this wonderful unity
+a being infinitely eternal, no matter where you look, even deep down - infinitely
+small, even up - infinitely big, do you understand?</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oFi-Vr-peK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oFi-Vr-peK" firstAttribute="bottom" secondItem="bit-dh-eTe" secondAttribute="bottom" constant="50" id="Faf-tD-CtG"/>
+                            <constraint firstItem="oFi-Vr-peK" firstAttribute="trailing" secondItem="bit-dh-eTe" secondAttribute="trailing" constant="20" id="Szc-hk-uR6"/>
+                            <constraint firstItem="bit-dh-eTe" firstAttribute="leading" secondItem="oFi-Vr-peK" secondAttribute="leading" constant="20" id="j4f-x4-HML"/>
+                            <constraint firstItem="bit-dh-eTe" firstAttribute="top" secondItem="oFi-Vr-peK" secondAttribute="top" constant="50" id="ohc-2m-gje"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wg5-3o-AG5"/>
                 </viewController>
@@ -257,6 +288,9 @@
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
