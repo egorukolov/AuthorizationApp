@@ -6,6 +6,9 @@
 //
 
 struct Storage {
-    let login = ""
-    let password = ""
+    let login: String
+    let password: String
 }
+
+
+

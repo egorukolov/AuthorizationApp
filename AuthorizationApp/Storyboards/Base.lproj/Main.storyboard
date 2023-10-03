@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,7 +55,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xxo-hy-rtm"/>
-                                            <segue destination="kdx-Pn-x4X" kind="presentation" identifier="go2NextScreen" modalPresentationStyle="fullScreen" id="3Ez-Sw-Ran"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-Jz-KPS">
@@ -101,6 +101,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="4Za-ni-ZPV" id="gAi-HG-dXC"/>
                         <outlet property="userNameTextField" destination="aGl-xl-taa" id="bUl-5D-o0I"/>
+                        <segue destination="kdx-Pn-x4X" kind="presentation" identifier="go2NextScreen" id="3cl-Tp-CWe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -217,14 +218,14 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bit-dh-eTe">
                                 <rect key="frame" x="20" y="94" width="335" height="474"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">I am so filled with my knowledge that I seem to have
+                                <string key="text">I am so filled with my knowledge that I seem to have
 been living on trillions and
 trillions of planets like this Earth for a hundred trillion billion years, this world is absolutely
 clear to me, and I am looking for only one thing here - peace, peace and
 this harmony, from merging with the infinitely eternal, from contemplating
 the great fractal similarity and from this wonderful unity
 a being infinitely eternal, no matter where you look, even deep down - infinitely
-small, even up - infinitely big, do you understand?</mutableString>
+small, even up - infinitely big, do you understand?</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -248,7 +249,7 @@ small, even up - infinitely big, do you understand?</mutableString>
         <!--Tab Bar Controller-->
         <scene sceneID="TbH-zX-wdG">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kdx-Pn-x4X" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="kdx-Pn-x4X" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dp8-gW-0Iw"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uU4-cF-TGQ">
@@ -289,7 +290,7 @@ small, even up - infinitely big, do you understand?</mutableString>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

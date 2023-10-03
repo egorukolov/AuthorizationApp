@@ -16,9 +16,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func logInButton() {
-        performSegue(withIdentifier: "go2NextScreen", sender: nil)
+        
+        let firstUser = Storage(login: "Miklos", password: "kfvgj4rf")
+        
+        if userNameTextField.text == firstUser.login &&
+            passwordTextField.text == firstUser.password {
+            
+            performSegue(withIdentifier: "go2NextScreen", sender: nil)
+            
+        } else {
+            
+            showAlert(title: "Upsss", message: "Wrong UserName or Password")
+            
+        }
     }
     
     @IBAction func unwindSegueToViewController(segue: UIStoryboardSegue) {
@@ -26,9 +37,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButton() {
+        showAlert(title: "A little hint", message: "Your first nickname in games")
     }
     
     @IBAction func forgotPasswordButton() {
+        showAlert(title: "Big hint", message: "You have idea")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,10 +50,11 @@ class ViewController: UIViewController {
                 as? TabBarController else { return }
         destinationVC.userName = userNameTextField.text ?? ""
     }
-
+    
 }
 
-// MARK: - Расширение для работы TextFields (Переход между и скрытие клавиатуры тапом по экрану)
+// MARK: - Extension
+//TextFields (Переход между и скрытие клавиатуры тапом по экрану)
 
 extension ViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -57,3 +71,13 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - Allert
+
+extension ViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
